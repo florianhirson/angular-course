@@ -27,4 +27,9 @@ export class CourseCardComponent implements OnInit {
 
     this.courseSelected.emit(this.course);
   }
+
+  //Only true if course and course.iconUrl aren't undefined and empty
+  isImageVisible() {
+    return this.course && this.course.iconUrl
+  }
 }
