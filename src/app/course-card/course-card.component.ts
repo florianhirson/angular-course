@@ -28,8 +28,14 @@ export class CourseCardComponent implements OnInit {
     this.courseSelected.emit(this.course);
   }
 
-  //Only true if course and course.iconUrl aren't undefined and empty
+  //Only true if the course and course.iconUrl aren't undefined and empty
   isImageVisible() {
     return this.course && this.course.iconUrl
+  }
+
+  cardClasses() {
+    if(this.course.category == 'BEGINNER') {
+      return 'beginner';
+    }
   }
 }
