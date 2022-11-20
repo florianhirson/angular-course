@@ -5,28 +5,15 @@
 
 </div>
 
-<div class="demo">
-  <div>Start Date: {{startDate | date: 'dd/MM/yyyy'}}</div>
+<div class="courses" #container>
 
-  <div> {{title | titlecase}}</div>
-
-  <div> {{price | currency: 'EUR'}}</div>
-
-  <div> Percentage: {{rate | percent}}</div>
-
-  <div *ngFor="let pair of course | keyvalue">
-      {{pair.key + ": " + pair.value}}
-  </div>
-</div>
-
-{{courses | json}}
-
-<div class="courses">
-
-  <course-card *ngFor="let course of courses | slice: 0: 2; index as i;"
-
+  <course-card #cardRef1
                (courseSelected)="onCourseSelected($event)"
-               [course]="course" [cardIndex]="i + 1"></course-card>
+               [course]="courses[0]"></course-card>
+
+  <course-card #cardRef2
+               (courseSelected)="onCourseSelected($event)"
+               [course]="courses[1]"></course-card>
 </div>
 
 
