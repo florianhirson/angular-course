@@ -5,17 +5,18 @@
     {{ cardIndex  || '' + ' ' + course.description }}
   </div>
 
-  <img #courseImage width="300" alt="Angular Logo" *ngIf="isImageVisible(); else noImage"
-       [src]="course.iconUrl">
+<!--  content passed to the component will be added here-->
+  <ng-content select=".course-image">
 
-  <ng-template #noImage>
-    <p>No image is available</p>
-  </ng-template>
+  </ng-content>
 
+  <ng-content select=".course-description">
 
-  <div class="course-description">
-    {{ course.longDescription }}
-  </div>
+  </ng-content>
+
+<!--  Will get all the content that don't match the 2 selectors above-->
+  <ng-content></ng-content>
+
 
   <div class="course-category" [ngSwitch]="course.category">
     <div class="category" *ngSwitchCase="'BEGINNER'">
