@@ -5,10 +5,22 @@
     {{ cardIndex  || '' + ' ' + course.description }}
   </div>
 
+<!--  <ng-template #blankImage>-->
+<!--    <p class="warn">{{course.description}} has no image yet.</p>-->
+
+<!--    <img src="/assets/empty-image.png"/>-->
+<!--  </ng-template>-->
+
 <!--  content passed to the component will be added here-->
-  <ng-content select="course-image">
+  <ng-content select="course-image" *ngIf="course.iconUrl; else noImage">
 
   </ng-content>
+
+  <ng-template #noImage>
+    <ng-container *ngTemplateOutlet="noImageTemplate; context: {description: course.description}">
+
+    </ng-container>
+  </ng-template>
 
   <ng-content select=".course-description">
 
