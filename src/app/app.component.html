@@ -14,19 +14,16 @@
     <!--  content passed to the course card component-->
     <course-image [src]="course.iconUrl"></course-image>
 
+    <course-image [src]="courses[1].iconUrl"></course-image>
+
+    <course-image [src]="courses[2].iconUrl"></course-image>
+
     <div class="course-description">
       {{ course.longDescription }}
     </div>
 
     Edit Description : <textarea></textarea>
   </course-card>
-
-<!--  <course-card-->
-<!--               (courseSelected)="onCourseSelected($event)"-->
-<!--               [course]="courses[1]">-->
-<!--    &lt;!&ndash;  content passed to the course card component&ndash;&gt;-->
-<!--    <h5>Total lessons: 10</h5>-->
-<!--  </course-card>-->
 </div>
 
 
