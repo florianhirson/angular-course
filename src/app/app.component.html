@@ -12,12 +12,7 @@
   <course-card (courseSelected)="onCourseSelected($event)"
                [course]="course">
     <!--  content passed to the course card component-->
-    <div class="course-image">
-      <img width="300" alt="Angular Logo"
-           [src]="course.iconUrl">
-
-      <h5>Total lessons: 5</h5>
-    </div>
+    <course-image [src]="course.iconUrl"></course-image>
 
     <div class="course-description">
       {{ course.longDescription }}
@@ -26,12 +21,12 @@
     Edit Description : <textarea></textarea>
   </course-card>
 
-  <course-card
-               (courseSelected)="onCourseSelected($event)"
-               [course]="courses[1]">
-    <!--  content passed to the course card component-->
-    <h5>Total lessons: 10</h5>
-  </course-card>
+<!--  <course-card-->
+<!--               (courseSelected)="onCourseSelected($event)"-->
+<!--               [course]="courses[1]">-->
+<!--    &lt;!&ndash;  content passed to the course card component&ndash;&gt;-->
+<!--    <h5>Total lessons: 10</h5>-->
+<!--  </course-card>-->
 </div>
 
 

@@ -1,12 +1,12 @@
 <!--Use ngIf to remove div if course is undefined-->
-<div class="course-card" *ngIf="course" [ngClass]="cardClasses()"  [ngStyle]="cardStyles()">
+<div class="course-card" *ngIf="course" [ngClass]="cardClasses()"  [ngStyle]="cardStyles()" #container>
 
   <div class="course-title">
     {{ cardIndex  || '' + ' ' + course.description }}
   </div>
 
 <!--  content passed to the component will be added here-->
-  <ng-content select=".course-image">
+  <ng-content select="course-image">
 
   </ng-content>
 
