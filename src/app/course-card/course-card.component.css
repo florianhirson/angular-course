@@ -20,6 +20,10 @@
   background: lightcyan;
 }
 
+:host-context(.salmon-theme) .course-card {
+  background: lightsalmon;
+}
+
 .course-card.beginner {
     background: lightsalmon;
 }
@@ -37,7 +41,7 @@
   font-weight: bold;
 }
 
-.course-card .course-description {
+.course-card ::ng-deep .course-description {
   max-width: 360px;
   margin: 0 auto;
   margin-top: 15px;
