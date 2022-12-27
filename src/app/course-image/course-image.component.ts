@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {CoursesService} from '../services/courses.service';
 
 @Component({
   selector: 'course-image',
