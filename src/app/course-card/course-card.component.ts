@@ -1,5 +1,5 @@
 
-import { AfterContentChecked, Attribute, ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
+import { AfterContentChecked, AfterViewChecked, Attribute, ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
 import { Course } from '../model/course';
 import { CoursesService } from '../services/courses.service';
 
@@ -9,7 +9,7 @@ import { CoursesService } from '../services/courses.service';
   styleUrls: ['./course-card.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CourseCardComponent implements OnInit, OnDestroy, OnChanges {
+export class CourseCardComponent implements OnInit, OnDestroy, OnChanges, AfterContentChecked, AfterViewChecked {
 
   @Input()
   course: Course;
@@ -23,6 +23,17 @@ export class CourseCardComponent implements OnInit, OnDestroy, OnChanges {
   //Use an Attribute decorator instead of an Input to improve performance
   constructor(private  coursesService: CoursesService, @Attribute('type') private type: string) {
     console.log(type)
+  }
+
+  ngAfterViewChecked(): void {
+    console.log("ngAfterViewChecked")
+
+    
+  }
+
+
+  ngAfterContentChecked(): void {
+    console.log("ngAfterContentChecked")
   }
 
 
