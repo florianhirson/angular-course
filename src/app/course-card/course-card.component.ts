@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output, Self} from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output, Self} from '@angular/core';
 import {Course} from '../model/course';
 import {CoursesService} from '../services/courses.service';
 
@@ -6,6 +6,7 @@ import {CoursesService} from '../services/courses.service';
   selector: 'course-card',
   templateUrl: './course-card.component.html',
   styleUrls: ['./course-card.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CourseCardComponent implements OnInit {
 
@@ -34,7 +35,10 @@ export class CourseCardComponent implements OnInit {
 
   }
 
-
+  onTitleChanged(newTitle: string) {
+      
+    this.course.description = newTitle;
+  }
 
 
 }

@@ -16,11 +16,11 @@ import {APP_CONFIG, AppConfig, CONFIG_TOKEN} from './config';
 })
 export class AppComponent implements OnInit {
 
-  courses$ : Observable<Course[]>;
+  courses$: Observable<Course[]>;
 
   constructor(private  coursesService: CoursesService,
               @Inject(CONFIG_TOKEN) private config:AppConfig) {
-    console.log(config)
+    //console.log(config)
   }
 
   ngOnInit() {
@@ -33,6 +33,16 @@ export class AppComponent implements OnInit {
       .subscribe(
         () => console.log('Course Saved !')
       );
+  }
+
+  onEditCourse() {
+    //const course = this.courses[0];
+
+    //const newCourse:any = {...course}; // makes a copy of the course object
+
+    //newCourse.description = 'New Value!';
+
+    //this.courses[0] = newCourse;
   }
 
 }
