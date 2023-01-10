@@ -1,5 +1,5 @@
 
-import { Attribute, ChangeDetectionStrategy, Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { AfterContentChecked, Attribute, ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
 import { Course } from '../model/course';
 import { CoursesService } from '../services/courses.service';
 
@@ -9,7 +9,7 @@ import { CoursesService } from '../services/courses.service';
   styleUrls: ['./course-card.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CourseCardComponent implements OnInit, OnDestroy {
+export class CourseCardComponent implements OnInit, OnDestroy, OnChanges {
 
   @Input()
   course: Course;
@@ -25,8 +25,13 @@ export class CourseCardComponent implements OnInit, OnDestroy {
     console.log(type)
   }
 
-  ngOnInit() {
 
+  ngOnChanges(changes: SimpleChanges) {
+    console.log("onChanges", changes)
+  }
+
+  ngOnInit() {
+    console.log("ngOnInit")
   }
 
   //called when the component is destroyed
