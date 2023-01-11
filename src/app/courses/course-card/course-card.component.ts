@@ -1,7 +1,7 @@
 
 import { AfterContentChecked, AfterViewChecked, Attribute, ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
-import { Course } from '../model/course';
-import { CoursesService } from '../services/courses.service';
+import { Course } from '../../model/course';
+import { CoursesService } from '../courses.service';
 
 @Component({
   selector: 'course-card',
