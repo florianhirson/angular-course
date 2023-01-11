@@ -6,7 +6,11 @@
     "angular-course": {
       "i18n": {
         "sourceLocale": "en",
-        "locales": {"fr": "src/locale/messages.fr.xlf"}
+        "locales": {
+          "fr": {
+            "translation": "src/locale/messages.fr.xlf"
+          }
+        }
       },
       "root": "",
       "sourceRoot": "src",

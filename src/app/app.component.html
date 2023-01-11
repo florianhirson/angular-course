@@ -6,7 +6,7 @@
 
 <div>
   <div class="demo">
-      <button (click)="onEditCourse()">Edit Course</button>
+      <button i18n (click)="onEditCourse()">Edit Course</button>
 
       <div i18n>{coursesTotal, plural, =0 {No course available} 
         =1 {One course is available.} 
@@ -15,7 +15,7 @@
 
   <div class="courses" >
 <!--    Use async to provide courses once it's retrieved from the server-->
-    <course-card *ngFor="let course of courses | filterByCategory: 'BEGINNER' "
+    <course-card *ngFor="let course of courses"
                  (courseChanged)="save($event)"
                  [course]="course"
                  type="beginner">

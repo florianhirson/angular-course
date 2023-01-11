@@ -4,16 +4,47 @@
     <body>
       <trans-unit id="701174153757adf13e7c24a248c8a873ac9f5193" datatype="html">
         <source>Angular logo</source>
+        <target>Logo Angular</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
           <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="756b2b2744938130877e47fd8e697024cb532092" datatype="html">
+        <source>Edit Course</source>
+        <target>Modifier le cours</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="05915106c4d3ea57fb4ce7960a04cfc086ed11c7" datatype="html">
         <source>{VAR_PLURAL, plural, =0 {No course available} =1 {One course is available.} other {A total of <x id="INTERPOLATION"/> courses are available.}}</source>
+        <target>{VAR_PLURAL, plural, =0 {Pas de crous disponible} =1 {Un cours est disponible.} other {Un total de <x id="INTERPOLATION"/> cours est disponible.}}</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
           <context context-type="linenumber">11,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bbfc222e30dacb25ebab4f90c1ab17c9db284058" datatype="html">
+        <source> <x id="ICU" equiv-text="{
+        course.category,
+        select,
+        BEGINNER {Beginner}
+        ADVANCED {Advanced}
+        INTERMEDIATE {Intermediate}
+      }"/> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/courses/course-card/course-card.component.html</context>
+          <context context-type="linenumber">18,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f5208659d2645c681dc09aaf34b5825880879b32" datatype="html">
+        <source>{VAR_SELECT, select, BEGINNER {Beginner} ADVANCED {Advanced} INTERMEDIATE {Intermediate}}</source>
+        <target>{VAR_SELECT, select, BEGINNER {Débutant} ADVANCED {Avancé} INTERMEDIATE {Intermédiaire}}</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/courses/course-card/course-card.component.html</context>
+          <context context-type="linenumber">19,25</context>
         </context-group>
       </trans-unit>
     </body>
