@@ -44,15 +44,11 @@ export class AppComponent implements OnInit {
   }
 
   onEditCourse() {
-    const course = this.courses[0];
+    const course = this.courses[1];
 
-    //Make a copy of the course object and change the description
-    const newCourse = {
-      ...course,
-      description: 'ngOnChanges'
-    };
+    console.log('Edit course ', course)
 
-    this.courses[0] = newCourse;
+    this.courses[1].category = 'ADVANCED';
   }
 
 }

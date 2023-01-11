@@ -7,7 +7,7 @@ import { CoursesService } from '../courses.service';
   selector: 'course-card',
   templateUrl: './course-card.component.html',
   styleUrls: ['./course-card.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  //changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CourseCardComponent implements OnInit, OnDestroy, OnChanges, AfterContentChecked, AfterViewChecked {
 
@@ -26,28 +26,28 @@ export class CourseCardComponent implements OnInit, OnDestroy, OnChanges, AfterC
   }
 
   ngAfterViewChecked(): void {
-    console.log("ngAfterViewChecked")
+    //console.log("ngAfterViewChecked")
 
     
   }
 
 
   ngAfterContentChecked(): void {
-    console.log("ngAfterContentChecked")
+    //console.log("ngAfterContentChecked")
   }
 
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log("onChanges", changes)
+    //console.log("onChanges", changes)
   }
 
   ngOnInit() {
-    console.log("ngOnInit")
+    //console.log("ngOnInit")
   }
 
   //called when the component is destroyed
   ngOnDestroy() {
-    console.log("ngOnDestroy")
+    //console.log("ngOnDestroy")
   }
 
   onSaveClicked(description:string) {

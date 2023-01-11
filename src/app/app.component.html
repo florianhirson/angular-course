@@ -9,9 +9,9 @@
       <button (click)="onEditCourse()">Edit Course</button>
   </div>
 
-  <div class="courses" *ngIf="courses[0] as course">
+  <div class="courses" >
 <!--    Use async to provide courses once it's retrieved from the server-->
-    <course-card 
+    <course-card *ngFor="let course of courses | filterByCategory: 'BEGINNER' "
                  (courseChanged)="save($event)"
                  [course]="course"
                  type="beginner">
