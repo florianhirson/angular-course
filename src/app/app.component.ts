@@ -1,6 +1,8 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, Injector, OnInit } from '@angular/core';
+import { createCustomElement } from '@angular/elements';
 import { COURSES } from '../db-data';
 import { AppConfig, CONFIG_TOKEN } from './config';
+import { CourseTitleComponent } from './course-title/course-title.component';
 import { CoursesService } from './courses/courses.service';
 import { Course } from './model/course';
 
@@ -20,7 +22,8 @@ export class AppComponent implements OnInit {
   coursesTotal = this.courses.length;
 
   constructor(private  coursesService: CoursesService,
-              @Inject(CONFIG_TOKEN) private config:AppConfig) {
+              @Inject(CONFIG_TOKEN) private config:AppConfig,
+              private injector: Injector) {
     console.log("Number of courses", this.coursesTotal)
   }
 
@@ -33,7 +36,11 @@ export class AppComponent implements OnInit {
     //this.coursesService.loadCourses().subscribe(courses => {
     //  this.courses = courses;
     //});
-    console.log("ngOnInit")
+    
+    const htmlElement = createCustomElement(CourseTitleComponent, {injector:this.injector});
+
+    customElements.define('course-title', htmlElement);
+
   }
 
   save(course: Course) {
