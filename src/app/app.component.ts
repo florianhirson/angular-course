@@ -15,13 +15,13 @@ export class AppComponent implements OnInit {
 
   //courses$: Observable<Course[]>;
 
-  //courses: Course[];
-
   courses: Course[] = COURSES;
+
+  coursesTotal = this.courses.length;
 
   constructor(private  coursesService: CoursesService,
               @Inject(CONFIG_TOKEN) private config:AppConfig) {
-    //console.log(config)
+    console.log("Number of courses", this.coursesTotal)
   }
 
 

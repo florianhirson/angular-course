@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="701174153757adf13e7c24a248c8a873ac9f5193" datatype="html">
+        <source>Angular logo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="05915106c4d3ea57fb4ce7960a04cfc086ed11c7" datatype="html">
+        <source>{VAR_PLURAL, plural, =0 {No course available} =1 {One course is available.} other {A total of <x id="INTERPOLATION"/> courses are available.}}</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">11,13</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

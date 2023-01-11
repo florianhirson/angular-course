@@ -4,6 +4,10 @@
   "newProjectRoot": "projects",
   "projects": {
     "angular-course": {
+      "i18n": {
+        "sourceLocale": "en",
+        "locales": {"fr": "src/locale/messages.fr.xlf"}
+      },
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,6 +17,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": [
+              "fr"
+            ],
             "outputPath": "dist/angular-course",
             "index": "src/index.html",
             "main": "src/main.ts",

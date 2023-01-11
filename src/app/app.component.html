@@ -1,5 +1,5 @@
 <div class="top-menu">
-  <img class="logo"
+  <img class="logo" i18n-title title="Angular logo" alt="Angular logo"
        src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
 
 </div>
@@ -7,6 +7,10 @@
 <div>
   <div class="demo">
       <button (click)="onEditCourse()">Edit Course</button>
+
+      <div i18n>{coursesTotal, plural, =0 {No course available} 
+        =1 {One course is available.} 
+        other {A total of {{coursesTotal}} courses are available.} }</div>
   </div>
 
   <div class="courses" >
